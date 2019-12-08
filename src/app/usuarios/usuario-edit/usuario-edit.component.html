@@ -1,0 +1,29 @@
+<div class="field">
+  <label class="label">Id</label>
+  <div class="control">
+    <input class="input" [(ngModel)]="usuarioData.id" placeholder="Text input">
+  </div>
+</div>
+
+<div class="field">
+  <label class="label">Username</label>
+  <div class="control ">
+    <input class="input " [(ngModel)]="usuarioData.username" placeholder="Text input" >
+
+</div>
+
+<div class="field">
+  <label class="label">Contraseña</label>
+  <div class="control ">
+    <input class="input " [(ngModel)]="usuarioData.clave" placeholder="Email input" >
+
+</div>
+
+<div class="field is-grouped">
+  <div class="control">
+    <button class="button is-link" (click)="updateUsuario()" >Enviar</button>
+  </div>
+  <div class="control">
+    <button class="button is-link is-light" (click)="volver()">Cancel</button>
+  </div>
+</div>

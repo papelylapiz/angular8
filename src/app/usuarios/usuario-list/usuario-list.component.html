@@ -1,0 +1,27 @@
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th >Id</th>
+            <th >Username</th>
+            <th >Clave</th>
+            <th >Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr mdbTableCol *ngFor="let user of Usuario">
+          <th scope="row">{{user.id}}</th>
+          <td>{{user.username}}</td>
+          <td>{{user.clave}}</td>
+          <td>
+            <a routerLink ="/app-usuario-detail/{{user.id}}">Ver</a>
+            &nbsp;
+            <a  routerLink="/app-usuario-edit/{{user.id}}">Editar</a>
+            &nbsp;
+            <a  (click)="deleteUsuario(user.id)">Eliminar</a>
+          </td>
+        </tr>
+
+        </tbody>
+      </table>
+
